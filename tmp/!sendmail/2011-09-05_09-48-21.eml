@@ -1,0 +1,32 @@
+X-Sendmail-Cmdline: sendmail.pl -t -i
+To: valiky@bk.ru
+Subject: Account details for yvalik at localhost (approved)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8; format=flowed; delsp=yes
+Content-Transfer-Encoding: 8Bit
+X-Mailer: Drupal
+Errors-To: me@localhost.com
+Return-Path: me@localhost.com
+Sender: me@localhost.com
+From: me@localhost.com
+
+yvalik,
+
+Your account at localhost has been activated.
+
+You may now log in by clicking on this link or copying and pasting it in your  
+browser:
+
+http://localhost/mir-pravoslav/?q=user/reset/1/1315205301/0cf4e76f521067fd112b0c1684d369d5
+
+This is a one-time login, so it can be used only once.
+
+After logging in, you will be redirected to  
+http://localhost/mir-pravoslav/?q=user/1/edit so you can change your  
+password.
+
+Once you have set your own password, you will be able to log in to  
+http://localhost/mir-pravoslav/?q=user in the future using:
+
+username: yvalik
+

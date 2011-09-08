@@ -1,0 +1,7 @@
+\usr\local\perl\bin\ptar
+\usr\local\perl\bin\ptar.bat
+\usr\local\perl\bin\ptardiff
+\usr\local\perl\bin\ptardiff.bat
+\usr\local\perl\lib\Archive\Tar.pm
+\usr\local\perl\lib\Archive\Tar\Constant.pm
+\usr\local\perl\lib\Archive\Tar\File.pm

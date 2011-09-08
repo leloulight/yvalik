@@ -1,0 +1,125 @@
+<style>
+#docsearch td, #docsearch input { font-size: 80%; }
+#docsearch input { width: 100%; }
+</style>
+<table id="docsearch" width="100%">
+<tbody>
+	<form method="get" action="http://www.google.ru/search">
+	<tr>
+		<td>Google</td>
+		<td><input type="text" name="q"/></td>
+		<td><input type="submit" value="»скать"/></td>
+	</tr>
+	</form>
+</tbody>
+<tbody style="display:none">
+	<form method="get" action="http://ru2.php.net/search.php">
+		<input type="hidden" name="show" value="quickref">
+		<input type="hidden" name="lang" value="ru">
+		<input type="hidden" name="x" value="0">
+		<input type="hidden" name="y" value="0">
+		<tr>
+			<td width="1%">PHP</td>
+			<td><input type="text" name="pattern"></td>
+		</tr>
+	</form>
+	<form method="get" action="http://dev.mysql.com/doc/mysql/search.php">
+		<input type="hidden" name="version" value="5.0">
+		<input type="hidden" name="from" value="/doc/refman/5.0/en/">
+		<input type="hidden" name="lang" value="en">
+		<input type="hidden" name="m" value="a">
+		<tr>
+			<td>MySQL</td>
+			<td><input type="text" name="q"></td>
+		</tr>
+	</form>
+	<form method="get" action="http://www.google.com/search">
+		<input type="hidden" name="as_epq" value="Version 2.2">
+		<input type="hidden" name="as_eq" value="&quot;List-Post&quot;">
+		<input type="hidden" name="hl" value="en">
+		<input type="hidden" name="as_qdr" value="all">
+		<input type="hidden" name="as_occt" value="any">
+		<input type="hidden" name="as_dt" value="i">
+		<input type="hidden" name="as_sitesearch" value="httpd.apache.org">
+		<input type="hidden" name="safe" value="off">
+		<tr>
+			<td>Apache</td>
+			<td><input type="text" name="as_q"></td>
+		</tr>
+	</form>
+	<form method="get" action="http://perldoc.perl.org/search.html">
+		<tr>
+			<td>Perl</td>
+			<td><input type="text" name="q"></td>
+		</tr>
+	</form>
+	<form method="get" action="http://search.postgresql.org/search">
+		<input type="hidden" name="u" value="/docs/8.2/static/">
+		<tr>
+			<td>PostgreSQL</td>
+			<td><input type="text" name="q"></td>
+		</tr>
+	</form>
+</tbody>
+</table>
+</form>
+
+<script language="JavaScript"><!--
+(function() {
+	var GRAY_COLOR = "#AAAAAA";
+	var curFocus = null;
+
+	var prepareInput = function(inp, name) {
+		inp.defValue = name;
+		inp.svValue = '';
+		inp.value = name;
+		inp.style.color = GRAY_COLOR;
+		inp.onfocus = function() {
+			if (curFocus) {
+				curFocus.svValue = curFocus.value;
+				curFocus.value = curFocus.defValue;
+				curFocus.style.color = GRAY_COLOR;
+			}
+			inp.value = inp.svValue;
+			inp.style.color = '';
+			inp.select();
+			curFocus = inp;
+		}
+	}
+	
+	var prepareTr = function(tr) {
+		var tds = tr.getElementsByTagName('TD');
+		var inputs = tds[1].getElementsByTagName('INPUT');
+		var name = tds[0].innerHTML;
+		prepareInput(inputs[0], name);
+	}
+	
+	var trim = function(s) {
+		return s.replace(/^\s+|\s+$/, '', 'g');
+	}
+	
+	var table = document.getElementById('docsearch');
+	var tbodys = table.getElementsByTagName('TBODY');
+	var buttons = tbodys[1].getElementsByTagName('BUTTON');
+	var googleInp = tbodys[0].getElementsByTagName('INPUT')[0];
+	var forms = tbodys[1].getElementsByTagName('FORM');
+	
+	for (var i = 0; i < forms.length; i++) {
+		forms[i].onsubmit = function() { 
+			if (!curFocus || trim(curFocus.value) == "") {
+				alert("¬ведите поисковую строку в форме!");
+				return false;
+			}
+			return true;
+		}
+	}
+	tbodys[0].style.display = 'none';
+	tbodys[1].style.display = '';
+	googleInp.name = '';
+	
+	var trs = tbodys[1].getElementsByTagName('TR');
+	for (var i = 0; i < trs.length; i++) {
+		prepareTr(trs[i]);
+	}
+})();
+//--></script>

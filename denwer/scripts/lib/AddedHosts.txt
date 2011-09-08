@@ -1,0 +1,8 @@
+# This file is created by hosts update system
+# Please DO NOT modify and DO NOT delete it!
+# Following hosts will be deleted from 'hosts' on cleanup.
+
+127.0.0.1	localhost
+127.0.0.1	www.localhost
+127.0.0.1	www.test.ru
+127.0.0.1	test.ru

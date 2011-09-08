@@ -1,0 +1,135 @@
+/* $Id: styles.css,v 1.1 2009/01/31 21:28:46 dvessel Exp $ */
+a{
+	color:#FFDC8B;
+	text-decoration:none;
+}
+a:hover{
+	text-decoration:underline;
+}
+
+h1#site-name {
+  margin-bottom: 0;
+}
+
+#site-header,
+#site-subheader,
+#footer-region,
+.column,
+.node,
+.comment,
+.block {
+  
+}
+
+/*
+** Formatting for administration page
+**
+** The admin panel styles are a mess. IE has problems with this so this is
+** only a temporary fix. This should be fixed in core.
+*/
+div.admin-panel {
+  padding: 0;
+}
+
+div.admin-panel .body {
+  padding: 0 !important;
+}
+
+div.admin .left,
+div.admin .right {
+  width: 50%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+div.admin .right .admin-panel {
+  margin-left: 10px;
+}
+/*Mir-Pravoslavita*/
+#branding{
+	background:#000 url(../images/header.png) no-repeat;	
+}
+#site-slogan{
+	margin: 20px 0 0 0;
+	color:#ffdc8b;
+	text-align:right;
+}
+#site-slogan .slogan{
+	font-weight:bold;
+}
+#site-name{
+	display:none;
+}
+#site-menu{
+	background:#000 url(../images/menu_bg.png) repeat-x;
+}
+#site-menu ul li{
+	margin:0 30px 0 10px;
+}
+#site-menu ul li a{
+	color:#ffdc8b;
+	text-decoration:none;
+}
+#site-menu ul li a:hover{
+	text-decoration:underline;
+}
+#new_program {
+	background:url("../images/left-news.png") no-repeat;
+	width:180px;
+	height:407px;
+	margin:20px 0 0;
+}
+#new_program #block-block-1{
+	font-size:12px;
+	color:#ffdc8b;
+}
+#new_program .title_program{
+	float:left;
+	font-weight:bold;
+	width:90px;
+	margin:20px 0 0 10px;
+}
+#new_program .dataprogram{
+	float: left;
+    margin: 20px 0 0 13px;
+    width: 46px;
+}
+#new_program .foto_program{
+	text-align:center;
+}
+#new_program .inprogram{
+	clear:both;
+	font-weight: bold;
+    margin: 0 0 0 12px;
+}
+#block-views-new_vipusk-block_1 .view-content{
+	
+}
+#block-views-new_vipusk-block_1 .view-content li{
+	border-bottom:1px solid #FFDC8B;
+	padding:5px 0;
+}
+#block-views-new_vipusk-block_1 .view-content a{
+	font-size:10px;
+	color:#FFDC8B;
+}
+#block-views-new_vipusk-block_1 .view-footer{
+	text-align:right;
+}
+.header_slovo{
+	background:url(../images/right-slovopreds.png) no-repeat;
+	width:190px;
+	height:115px;
+}
+#block-views-slovo_predst-block_1{
+	padding:10px;
+}
+#sidebar-right{
+	padding:0 0 0 30px;
+	width:190px;
+
+}
+#block-views-slovo_predst-block_1{
+	background:#f6e092;
+}
+/*Mir-Pravoslavita*/

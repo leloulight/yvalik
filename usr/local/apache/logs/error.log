@@ -1,0 +1,17 @@
+[Thu Sep 08 09:05:53 2011] [warn] Init: SSL server IP/port conflict: localhost:443 (Z:/usr/local/apache/conf/vhosts.conf:38) vs. test.ru:443 (Z:/usr/local/apache/conf/vhosts.conf:61)
+[Thu Sep 08 09:05:53 2011] [warn] Init: You should not use name-based virtual hosts in conjunction with SSL!!
+[Thu Sep 08 09:05:54 2011] [warn] Init: SSL server IP/port conflict: localhost:443 (Z:/usr/local/apache/conf/vhosts.conf:38) vs. test.ru:443 (Z:/usr/local/apache/conf/vhosts.conf:61)
+[Thu Sep 08 09:05:54 2011] [warn] Init: You should not use name-based virtual hosts in conjunction with SSL!!
+[Thu Sep 08 09:05:54 2011] [notice] Apache/2.2.4 (Win32) mod_ssl/2.2.4 OpenSSL/0.9.8d PHP/5.2.4 configured -- resuming normal operations
+[Thu Sep 08 09:05:54 2011] [notice] Server built: Jan  9 2007 23:17:20
+[Thu Sep 08 09:05:54 2011] [notice] Parent: Created child process 1892
+[Thu Sep 08 09:05:54 2011] [notice] Disabled use of AcceptEx() WinSock2 API
+[Thu Sep 08 09:05:54 2011] [warn] Init: SSL server IP/port conflict: localhost:443 (Z:/usr/local/apache/conf/vhosts.conf:38) vs. test.ru:443 (Z:/usr/local/apache/conf/vhosts.conf:61)
+[Thu Sep 08 09:05:54 2011] [warn] Init: You should not use name-based virtual hosts in conjunction with SSL!!
+[Thu Sep 08 09:05:54 2011] [warn] Init: SSL server IP/port conflict: localhost:443 (Z:/usr/local/apache/conf/vhosts.conf:38) vs. test.ru:443 (Z:/usr/local/apache/conf/vhosts.conf:61)
+[Thu Sep 08 09:05:54 2011] [warn] Init: You should not use name-based virtual hosts in conjunction with SSL!!
+[Thu Sep 08 09:05:54 2011] [notice] Child 1892: Child process is running
+[Thu Sep 08 09:05:54 2011] [notice] Child 1892: Acquired the start mutex.
+[Thu Sep 08 09:05:54 2011] [notice] Child 1892: Starting 250 worker threads.
+[Thu Sep 08 09:05:54 2011] [notice] Child 1892: Listening on port 443.
+[Thu Sep 08 09:05:54 2011] [notice] Child 1892: Listening on port 80.

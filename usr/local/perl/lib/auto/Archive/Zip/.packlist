@@ -1,0 +1,15 @@
+\usr\local\perl\bin\crc32
+\usr\local\perl\bin\crc32.bat
+\usr\local\perl\lib\Archive\Zip.pm
+\usr\local\perl\lib\Archive\Zip\Archive.pm
+\usr\local\perl\lib\Archive\Zip\BufferedFileHandle.pm
+\usr\local\perl\lib\Archive\Zip\DirectoryMember.pm
+\usr\local\perl\lib\Archive\Zip\FAQ.pod
+\usr\local\perl\lib\Archive\Zip\FileMember.pm
+\usr\local\perl\lib\Archive\Zip\Member.pm
+\usr\local\perl\lib\Archive\Zip\MemberRead.pm
+\usr\local\perl\lib\Archive\Zip\MockFileHandle.pm
+\usr\local\perl\lib\Archive\Zip\NewFileMember.pm
+\usr\local\perl\lib\Archive\Zip\StringMember.pm
+\usr\local\perl\lib\Archive\Zip\Tree.pm
+\usr\local\perl\lib\Archive\Zip\ZipFileMember.pm
