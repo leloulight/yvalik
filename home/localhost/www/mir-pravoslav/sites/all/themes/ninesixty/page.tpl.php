@@ -15,7 +15,9 @@
   <?php print $head; ?>
   <?php print $styles; ?>
   <?php print $scripts; ?>
+  <?php if (drupal_is_front_page()) : ?>
   	<script type="text/javascript" src="<?php global $base_url ?><?= $base_url."/".path_to_theme() ?>/js/jquery.min.js" ></script>
+  <?php endif; ?>
     <script type="text/javascript" src="<?= $base_url."/".path_to_theme() ?>/js/jquery.jcarousel.js" ></script>
     <link rel="stylesheet" type="text/css" href="<?= $base_url."/".path_to_theme() ?>/styles/skin.css" />
 </head>
@@ -62,9 +64,21 @@
       </div>
     <?php endif; ?>
     </div>
-
+	
+	<div id="bg-content" class="grid-16 clear-block">
 	<div id="main" class="column <?php print 'grid-8 push-4' ?>">	
     <!--<div id="main" class="column <?php print ns('grid-16', $left, 4, $right, 3) . ' ' . ns('push-4', !$left, 4); ?>">-->
+	  
+	  <?php if ($ukr_prav): ?>
+  			<div id="ukr_prav" class="region grid-4 column alpha ">
+    			<?php print $ukr_prav ?>
+  			</div>
+	  <?php endif; ?>
+	  <?php if ($world_prav): ?>
+  			<div id="world_prav" class="region grid-4 column alpha  ">
+    			<?php print $world_prav ?>
+  			</div>
+	  <?php endif; ?>
       <?php print $breadcrumb; ?>
       <?php if ($title): ?>
         <h1 class="title" id="page-title"><?php print $title; ?></h1>
@@ -95,7 +109,7 @@
   <?php endif; ?>
 
   <?php if ($right || $slovopredst): ?>
-    <div id="sidebar-right" class="column sidebar region grid-4">
+    <div id="sidebar-right" class="column sidebar region ">
 		<?php if ($slovopredst): ?>
   			<div id="slovopredst" class="region">
     			<?php print $slovopredst ?>
@@ -104,7 +118,7 @@
       <?php print $right; ?>
     </div>
   <?php endif; ?>
-
+	
 
   <div id="footer" class="prefix-1 suffix-1">
     <?php if ($footer): ?>
@@ -120,6 +134,7 @@
     <?php endif; ?>
   </div>
 
+</div>
 
   </div>
   <?php print $closure; ?>

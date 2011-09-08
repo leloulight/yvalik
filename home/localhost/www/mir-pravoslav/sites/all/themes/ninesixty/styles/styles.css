@@ -127,9 +127,15 @@ div.admin .right .admin-panel {
 #sidebar-right{
 	padding:0 0 0 30px;
 	width:190px;
-
+	float:right;
 }
 #block-views-slovo_predst-block_1{
-	background:#f6e092;
+	background:#f6f3a1;
+	margin:-2px 0 0 0;
 }
+#bg-content{
+	/*background: #f8fad4 url(../images/content_bg.png) no-repeat !important;*/
+	/*Общий фон*/
+}
+
 /*Mir-Pravoslavita*/
