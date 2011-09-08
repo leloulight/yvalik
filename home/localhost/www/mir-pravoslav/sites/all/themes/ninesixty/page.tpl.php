@@ -71,11 +71,13 @@
 	  
 	  <?php if ($ukr_prav): ?>
   			<div id="ukr_prav" class="region grid-4 column alpha">
+			
     			<?php print $ukr_prav ?>
   			</div>
 	  <?php endif; ?>
 	  <?php if ($world_prav): ?>
   			<div id="world_prav" class="region grid-4 column alpha">
+			
     			<?php print $world_prav ?>
   			</div>
 	  <?php endif; ?>

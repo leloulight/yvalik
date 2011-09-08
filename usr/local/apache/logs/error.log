@@ -1,148 +1,58 @@
-[Thu Sep 08 15:44:10 2011] [warn] Init: SSL server IP/port conflict: localhost:443 (Z:/usr/local/apache/conf/vhosts.conf:38) vs. test.ru:443 (Z:/usr/local/apache/conf/vhosts.conf:61)
-[Thu Sep 08 15:44:10 2011] [warn] Init: You should not use name-based virtual hosts in conjunction with SSL!!
-[Thu Sep 08 15:44:10 2011] [warn] Init: SSL server IP/port conflict: localhost:443 (Z:/usr/local/apache/conf/vhosts.conf:38) vs. test.ru:443 (Z:/usr/local/apache/conf/vhosts.conf:61)
-[Thu Sep 08 15:44:10 2011] [warn] Init: You should not use name-based virtual hosts in conjunction with SSL!!
-[Thu Sep 08 15:44:10 2011] [notice] Apache/2.2.4 (Win32) mod_ssl/2.2.4 OpenSSL/0.9.8d PHP/5.2.4 configured -- resuming normal operations
-[Thu Sep 08 15:44:10 2011] [notice] Server built: Jan  9 2007 23:17:20
-[Thu Sep 08 15:44:10 2011] [notice] Parent: Created child process 3016
-[Thu Sep 08 15:44:10 2011] [notice] Disabled use of AcceptEx() WinSock2 API
-[Thu Sep 08 15:44:11 2011] [warn] Init: SSL server IP/port conflict: localhost:443 (Z:/usr/local/apache/conf/vhosts.conf:38) vs. test.ru:443 (Z:/usr/local/apache/conf/vhosts.conf:61)
-[Thu Sep 08 15:44:11 2011] [warn] Init: You should not use name-based virtual hosts in conjunction with SSL!!
-[Thu Sep 08 15:44:11 2011] [warn] Init: SSL server IP/port conflict: localhost:443 (Z:/usr/local/apache/conf/vhosts.conf:38) vs. test.ru:443 (Z:/usr/local/apache/conf/vhosts.conf:61)
-[Thu Sep 08 15:44:11 2011] [warn] Init: You should not use name-based virtual hosts in conjunction with SSL!!
-[Thu Sep 08 15:44:11 2011] [notice] Child 3016: Child process is running
-[Thu Sep 08 15:44:11 2011] [notice] Child 3016: Acquired the start mutex.
-[Thu Sep 08 15:44:11 2011] [notice] Child 3016: Starting 250 worker threads.
-[Thu Sep 08 15:44:11 2011] [notice] Child 3016: Listening on port 443.
-[Thu Sep 08 15:44:11 2011] [notice] Child 3016: Listening on port 80.
-[Thu Sep 08 15:44:39 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin
-[Thu Sep 08 15:44:39 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin
-[Thu Sep 08 15:44:39 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin
-[Thu Sep 08 15:44:50 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/modules
-[Thu Sep 08 15:44:50 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/modules
-[Thu Sep 08 15:44:50 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/modules
-[Thu Sep 08 15:44:50 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/modules
-[Thu Sep 08 15:45:08 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin
-[Thu Sep 08 15:45:08 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin
-[Thu Sep 08 15:45:11 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/settings/performance
-[Thu Sep 08 15:45:11 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/settings/performance
-[Thu Sep 08 15:45:11 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/settings/performance
-[Thu Sep 08 15:45:16 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/settings/performance
-[Thu Sep 08 15:45:16 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/settings/performance
-[Thu Sep 08 15:45:16 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/settings/performance
-[Thu Sep 08 15:45:19 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/settings/performance
-[Thu Sep 08 15:45:19 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/settings/performance
-[Thu Sep 08 15:45:19 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/settings/performance
-[Thu Sep 08 15:45:21 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin
-[Thu Sep 08 15:45:21 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin
-[Thu Sep 08 15:45:21 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin
-[Thu Sep 08 15:45:25 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/settings/admin
-[Thu Sep 08 15:45:25 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/settings/admin
-[Thu Sep 08 15:51:49 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/add
-[Thu Sep 08 15:51:49 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/add
-[Thu Sep 08 15:51:49 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/add
-[Thu Sep 08 15:51:51 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/add/new
-[Thu Sep 08 15:51:51 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/add/new
-[Thu Sep 08 15:51:51 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/add/new
-[Thu Sep 08 15:51:51 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/add/new
-[Thu Sep 08 15:54:57 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/add
-[Thu Sep 08 15:54:57 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/add
-[Thu Sep 08 15:54:57 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/add
-[Thu Sep 08 15:54:59 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/add/new
-[Thu Sep 08 15:54:59 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/add/new
-[Thu Sep 08 15:54:59 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/add/new
-[Thu Sep 08 15:54:59 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/add/new
-[Thu Sep 08 15:55:39 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/add
-[Thu Sep 08 15:55:39 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/add
-[Thu Sep 08 15:55:41 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/add/new
-[Thu Sep 08 15:55:41 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/add/new
-[Thu Sep 08 15:55:41 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/add/new
-[Thu Sep 08 15:55:41 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/add/new
-[Thu Sep 08 15:55:48 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/add
-[Thu Sep 08 15:55:48 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/add
-[Thu Sep 08 15:55:48 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/add
-[Thu Sep 08 15:58:32 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/5
-[Thu Sep 08 15:58:32 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/5
-[Thu Sep 08 15:58:32 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/5
-[Thu Sep 08 15:58:34 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/5/edit
-[Thu Sep 08 15:58:34 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/5/edit
-[Thu Sep 08 15:58:34 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/5/edit
-[Thu Sep 08 15:58:34 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/5/edit
-[Thu Sep 08 15:58:47 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/5
-[Thu Sep 08 15:58:47 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/5
-[Thu Sep 08 15:58:47 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/5
-[Thu Sep 08 16:04:12 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:04:12 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:04:12 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:04:12 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:04:22 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:04:22 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:04:22 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:04:22 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:06:34 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/add
-[Thu Sep 08 16:06:34 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/add
-[Thu Sep 08 16:06:34 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/add
-[Thu Sep 08 16:06:37 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/add/new
-[Thu Sep 08 16:06:37 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/add/new
-[Thu Sep 08 16:06:37 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/add/new
-[Thu Sep 08 16:06:37 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/add/new
-[Thu Sep 08 16:06:46 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/add/new
-[Thu Sep 08 16:06:46 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/add/new
-[Thu Sep 08 16:06:46 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/add/new
-[Thu Sep 08 16:06:46 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/add/new
-[Thu Sep 08 16:06:59 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/7
-[Thu Sep 08 16:06:59 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/7
-[Thu Sep 08 16:06:59 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/7
-[Thu Sep 08 16:10:53 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/5
-[Thu Sep 08 16:10:53 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/5
-[Thu Sep 08 16:10:53 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/5
-[Thu Sep 08 16:10:55 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/5/edit
-[Thu Sep 08 16:10:55 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/5/edit
-[Thu Sep 08 16:10:55 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/5/edit
-[Thu Sep 08 16:10:55 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/5/edit
-[Thu Sep 08 16:11:03 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/5
-[Thu Sep 08 16:11:03 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/5
-[Thu Sep 08 16:11:03 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/5
-[Thu Sep 08 16:11:07 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/5
-[Thu Sep 08 16:11:07 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/5
-[Thu Sep 08 16:11:07 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/5
-[Thu Sep 08 16:11:21 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/7
-[Thu Sep 08 16:11:21 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/7
-[Thu Sep 08 16:11:21 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/7
-[Thu Sep 08 16:12:20 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:12:20 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:12:21 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:12:21 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:12:47 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:12:47 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:12:48 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:12:48 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:20:47 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:20:47 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:20:47 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:20:47 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:21:16 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:21:16 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:21:16 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:21:16 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:21:25 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:21:25 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:21:25 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:21:25 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:21:33 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:21:33 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:21:33 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:21:33 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:21:39 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/7
-[Thu Sep 08 16:21:39 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/7
-[Thu Sep 08 16:21:39 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/7
-[Thu Sep 08 16:21:45 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/5
-[Thu Sep 08 16:21:45 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/5
-[Thu Sep 08 16:21:45 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/5
-[Thu Sep 08 16:21:47 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/5/edit
-[Thu Sep 08 16:21:47 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/5/edit
-[Thu Sep 08 16:21:47 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/5/edit
-[Thu Sep 08 16:21:47 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/5/edit
-[Thu Sep 08 16:21:56 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/5
-[Thu Sep 08 16:21:56 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/5
-[Thu Sep 08 16:21:57 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/5
+[Thu Sep 08 16:42:55 2011] [warn] Init: SSL server IP/port conflict: localhost:443 (Z:/usr/local/apache/conf/vhosts.conf:38) vs. test.ru:443 (Z:/usr/local/apache/conf/vhosts.conf:61)
+[Thu Sep 08 16:42:55 2011] [warn] Init: You should not use name-based virtual hosts in conjunction with SSL!!
+[Thu Sep 08 16:42:55 2011] [warn] Init: SSL server IP/port conflict: localhost:443 (Z:/usr/local/apache/conf/vhosts.conf:38) vs. test.ru:443 (Z:/usr/local/apache/conf/vhosts.conf:61)
+[Thu Sep 08 16:42:55 2011] [warn] Init: You should not use name-based virtual hosts in conjunction with SSL!!
+[Thu Sep 08 16:42:55 2011] [notice] Apache/2.2.4 (Win32) mod_ssl/2.2.4 OpenSSL/0.9.8d PHP/5.2.4 configured -- resuming normal operations
+[Thu Sep 08 16:42:55 2011] [notice] Server built: Jan  9 2007 23:17:20
+[Thu Sep 08 16:42:55 2011] [notice] Parent: Created child process 1336
+[Thu Sep 08 16:42:55 2011] [notice] Disabled use of AcceptEx() WinSock2 API
+[Thu Sep 08 16:42:56 2011] [warn] Init: SSL server IP/port conflict: localhost:443 (Z:/usr/local/apache/conf/vhosts.conf:38) vs. test.ru:443 (Z:/usr/local/apache/conf/vhosts.conf:61)
+[Thu Sep 08 16:42:56 2011] [warn] Init: You should not use name-based virtual hosts in conjunction with SSL!!
+[Thu Sep 08 16:42:56 2011] [warn] Init: SSL server IP/port conflict: localhost:443 (Z:/usr/local/apache/conf/vhosts.conf:38) vs. test.ru:443 (Z:/usr/local/apache/conf/vhosts.conf:61)
+[Thu Sep 08 16:42:56 2011] [warn] Init: You should not use name-based virtual hosts in conjunction with SSL!!
+[Thu Sep 08 16:42:56 2011] [notice] Child 1336: Child process is running
+[Thu Sep 08 16:42:56 2011] [notice] Child 1336: Acquired the start mutex.
+[Thu Sep 08 16:42:56 2011] [notice] Child 1336: Starting 250 worker threads.
+[Thu Sep 08 16:42:56 2011] [notice] Child 1336: Listening on port 443.
+[Thu Sep 08 16:42:56 2011] [notice] Child 1336: Listening on port 80.
+[Thu Sep 08 16:52:05 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
+[Thu Sep 08 16:52:05 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
+[Thu Sep 08 16:52:05 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
+[Thu Sep 08 16:52:05 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
+[Thu Sep 08 16:53:28 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
+[Thu Sep 08 16:53:28 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
+[Thu Sep 08 16:53:29 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
+[Thu Sep 08 16:53:29 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
+[Thu Sep 08 16:53:35 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
+[Thu Sep 08 16:53:35 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
+[Thu Sep 08 16:53:35 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
+[Thu Sep 08 16:53:35 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
+[Thu Sep 08 16:53:44 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/4
+[Thu Sep 08 16:53:44 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/4
+[Thu Sep 08 16:53:44 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/4
+[Thu Sep 08 16:53:46 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/4/edit
+[Thu Sep 08 16:53:46 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/4/edit
+[Thu Sep 08 16:53:46 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/4/edit
+[Thu Sep 08 16:53:46 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/4/edit
+[Thu Sep 08 16:54:24 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/4
+[Thu Sep 08 16:54:24 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/4
+[Thu Sep 08 16:54:24 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/4
+[Thu Sep 08 17:08:56 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/4
+[Thu Sep 08 17:08:56 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/4
+[Thu Sep 08 17:08:56 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/4
+[Thu Sep 08 17:09:17 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
+[Thu Sep 08 17:09:17 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
+[Thu Sep 08 17:09:17 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
+[Thu Sep 08 17:09:17 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
+[Thu Sep 08 17:09:31 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
+[Thu Sep 08 17:09:31 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
+[Thu Sep 08 17:09:31 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
+[Thu Sep 08 17:09:31 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
+[Thu Sep 08 17:09:43 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
+[Thu Sep 08 17:09:43 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
+[Thu Sep 08 17:09:43 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
+[Thu Sep 08 17:09:43 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
+[Thu Sep 08 17:09:51 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
+[Thu Sep 08 17:09:51 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
+[Thu Sep 08 17:09:51 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
+[Thu Sep 08 17:09:51 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block

@@ -134,8 +134,49 @@ div.admin .right .admin-panel {
 	margin:-2px 0 0 0;
 }
 #bg-content{
-	/*background: #f8fad4 url(../images/content_bg.png) no-repeat !important;*/
+	background: #f8fad4 url(../images/content_bg.png) no-repeat !important;
 	/*Общий фон*/
 }
-
+#ukr_prav{
+	margin:20px 20px 0 0;
+}
+#world_prav{
+	margin:20px 0 0 0; 
+}
+#ukr_prav .block h2,
+#world_prav .block h2
+{
+	background:url(../images/title-new.png) no-repeat;
+	font-size:10px;
+	border-bottom:1px solid #015121;
+	color:#015121;
+	margin-bottom:0px;
+}
+#ukr_prav .views-field-title ,
+#world_prav .views-field-title {
+	padding:10px 0 10px 20px;
+}
+#ukr_prav .views-field-title a,
+#world_prav .views-field-title a
+{
+	color:#3a3a3a;
+	
+}
+#ukr_prav .view-content,
+#world_prav .view-content
+{
+	background:#fffde3;
+}
+#ukr_prav .views-field-title-1,#world_prav .views-field-title-1{
+	text-align:right;
+	background:url(../images/read_more.png) repeat-x;
+	padding:0 20px 0;
+}
+#ukr_prav .views-field-title-1 a,#world_prav .views-field-title-1 a{
+	color:#015121;
+	font-size:12px;
+	background:url(../images/read_more_but.png) no-repeat right;
+	padding:0 20px 0 0; 
+	
+}
 /*Mir-Pravoslavita*/
