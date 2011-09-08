@@ -70,12 +70,12 @@
     <!--<div id="main" class="column <?php print ns('grid-16', $left, 4, $right, 3) . ' ' . ns('push-4', !$left, 4); ?>">-->
 	  
 	  <?php if ($ukr_prav): ?>
-  			<div id="ukr_prav" class="region grid-4 column alpha ">
+  			<div id="ukr_prav" class="region grid-4 column alpha">
     			<?php print $ukr_prav ?>
   			</div>
 	  <?php endif; ?>
 	  <?php if ($world_prav): ?>
-  			<div id="world_prav" class="region grid-4 column alpha  ">
+  			<div id="world_prav" class="region grid-4 column alpha">
     			<?php print $world_prav ?>
   			</div>
 	  <?php endif; ?>
@@ -88,11 +88,13 @@
       <?php endif; ?>
       <?php print $messages; ?>
       <?php print $help; ?>
-
+		
+	  <?php if (!drupal_is_front_page()) : ?>
       <div id="main-content" class="region clear-block">
         <?php print $content; ?>
       </div>
-
+	  <?php endif; ?>
+	
       <?php print $feed_icons; ?>
     </div>
 

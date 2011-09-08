@@ -12,3 +12,5 @@ Version: '5.0.45-community-nt'  socket: ''  port: 3306  MySQL Community Edition 
 Version: '5.0.45-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
 110908  9:05:52 [Note] \usr\local\mysql5\bin\mysqld.exe: ready for connections.
 Version: '5.0.45-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+110908 15:44:09 [Note] \usr\local\mysql5\bin\mysqld.exe: ready for connections.
+Version: '5.0.45-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
