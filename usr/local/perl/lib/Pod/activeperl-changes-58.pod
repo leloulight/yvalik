@@ -1,0 +1,1347 @@
+=head1 ActivePerl 5.8 Change Log
+
+For the latest information on ActivePerl, please see:
+
+    http://www.ActiveState.com/ActivePerl/
+
+=head2 Build 820 Wednesday, Jan 24, 2007
+
+Build 820 is based on Perl 5.8.8.
+
+I<Bug Fixes and Changes since build 819>
+
+=over 3
+
+=item *
+
+PPM has been upgraded to version 4.01.
+
+=over 3
+
+=item *
+
+The self-contained tkkits required by the Tcl module have been updated.
+
+=item *
+
+The PPM UI now supports install and uninstall of modules with
+post-install or uninstall scripts.
+
+=item *
+
+PPM now always uses package.xml for the ActiveState repository and
+doesn't fall back to downloading thousands of PPDs if the package.xml
+file is temporarily unavailable.
+
+=item *
+
+PPM now runs post-install scripts in dependency order.
+
+=item *
+
+The --force option to 'ppm install' now allows files already installed
+by other packages to be overwritten. Ownership of these files is
+transferred to the new package.
+
+=item *
+
+Added --no-sync option to the 'ppm search', 'ppm install' and
+'ppm upgrade' commands.
+
+=item *
+
+Added --max-ppd option to 'ppm repo sync' command.
+
+=item *
+
+Added 'ppm config' command.
+
+=item *
+
+Added 'ppm tree' command.
+
+=item *
+
+The 'ppm repo sync' command now always checks the server to see if
+updates to the repository are available.
+
+=item *
+
+Improved compatiblity with PPD files from PPM3 repositories.
+
+=item *
+
+PPM4 now supports ZIP archives as the codebase of PPD files.
+
+=item *
+
+The 'ppm-shell' command on Windows now uses Term::ReadLine::Stub
+for terminal I/O to provide command history recall.
+
+=item *
+
+On Windows, PPM state data is now stored in LOCAL_APPDATA instead of
+APPDATA.  The database can be quite large and is therefore not suitable
+for the roaming profile.
+
+=item *
+
+PPM now picks up modules from F<site>; but still looks in the F<perl>
+area first.  This allows you to install Crypt-SSLeay in order to be
+able to access C<https://...>-repositories.
+
+=item *
+
+Fixed a problem causing PPM to sometimes download package tarballs from
+the wrong repository.
+
+=item *
+
+The PPM GUI now shows which repository a package comes from. The
+Repository column is hidden by default.
+
+=item *
+
+The PPM GUI now warns about downgrades on modules selected for
+installation which have a lower version number than the currently
+installed version.
+
+=item *
+
+The PPM GUI used to drop all dependencies if some of them failed.  It
+now keeps any remaining dependencies.
+
+=item *
+
+In the PPM GUI, package selection is not cleared if the install fails.
+This makes it possible to retry without having to select all the same
+packages again.
+
+=item *
+
+The PPM GUI now shows a download progress bar.
+
+=item *
+
+New PPM icon on Mac OS.
+
+=back
+
+=item *
+
+There have been various improvements in Unicode handling on Windows.
+Most of them rely on the fact that Windows stores a short 8.3 name for
+each filename that is longer, or contains characters not in the system
+codepage.  By using the short name Perl is able to access these files
+throught the byte stream APIs that the Perl core is using.
+
+If the generation of short filenames has been disabled, then filenames
+containing characters outside the system codepage will still not be
+accessible.  Since the short file names are stored by the file system,
+this mechanism will also only work for existing files.  There is no
+way to determine a short file name for files that have not yet been
+created.
+
+=over 3
+
+=item *
+
+readdir() and glob() will return the short name if the long name
+cannot be represented in the system codepage.
+
+=item *
+
+The PATH environment variable is preprocessed and all entries using
+characters that are not in the system codepage will be replaced with
+their short name versions.  This preprocessing step will also remove
+surrounding quote characters from all entries in the PATH variable.
+
+The PATH cleanup happens early enough that F<perl.exe> will be able to
+find scripts via the C<-S> commandline option in those "inaccessible"
+directories.
+
+=item *
+
+Both $^X and the @INC entries derived from $^X (lib and site/lib
+directories) will be converted to the short form, if necessary.
+
+Note that installing ActivePerl into a directory whose name cannot be
+represented in the system codepage is still discouraged.
+
+=item *
+
+Win32::GetCwd() will return a short name, if necessary, and
+Win32::SetCwd() can accept a Unicode name.
+
+=item *
+
+The new Win32::GetANSIPathName() accepts a pathname that may contain
+Unicode characters and returns the name in the system codepage.
+
+The file or directory must already exist; otherwise characters not in
+the system codepage will be translated using replacement characters
+(usually '?'), resulting in a potentially invalid filename.
+
+=item *
+
+Win32::GetLongPathName() may return Unicode characters now.
+
+=item *
+
+Win32::GetFullPathName() will return a short name, if necessary.  Call
+Win32::GetLongPathName() on the return value (in scalar context) to
+get the full pathname in Unicode:
+
+=item *
+
+Win32::GetFolderPath() will return a short name, if necessary.  Call
+Win32::GetLongPathName() on the return value to get the full pathname
+in Unicode.
+
+=item *
+
+Win32::ExpandEnvironmentStrings() may return Unicode characters
+because it will use the Unicode process environment directly.
+
+Any changes to %ENV however will be propagated to the process
+environment, and %ENV only stores byte strings.  There is currently
+no API to set environment variables to a Unicode string.
+
+=item *
+
+Win32::MsgBox() now accepts Unicode strings for both the MESSAGE
+and TITLE paramters.
+
+=item *
+
+Win32::LoginName() may return Unicode characters.
+
+=back
+
+=item *
+
+The builtin Perl kill() function now support killing process trees by
+using negative signal numbers on Windows too.  Currently kill() on
+Windows will still only terminate processes owned by the same user,
+even when the user is a member of the Administrators group.
+
+=item *
+
+Perl on Windows could hang indefinitely under certain conditions
+involving more than one of: alarm(), sleep(), waitpid(), system() and a
+GUI toolkit like Tk, wxPerl, Win32::GUI (or any other function that uses
+a messageloop).  This indefinite loop should no longer occur.
+
+=item *
+
+The Windows installer now puts F<site\bin> in the PATH.
+
+=item *
+
+The Windows installer now detects and prevents installation on top of
+ActivePerl 817 or earlier.  This is necessary because the changed
+order of F<lib> and F<site/lib> in @INC would otherwise put old
+modules from the previous installation in front of the new modules
+bundled with this release.
+
+Also see the installation guide for help on saving and restoring your
+installed PPM modules with PPM-Profile.
+
+=item *
+
+The Windows installer for 64-bit ActivePerl will default the install
+location to F<C:\Perl64> instead of F<C:\Perl>.  Installing both the
+32 and 64 bit versions of ActivePerl into the same directory is not
+supported.
+
+The Start menu shortcut and the I<Add Remove Programs> entry for the
+64 bit version are marked with a " (64-bit)" suffix to differentiate
+them from the 32 bit versions.
+
+=item *
+
+Improved MingW compatiblity on Windows.
+
+=item *
+
+The lwp-request aliases GET, HEAD, POST are no longer installed; use
+lwp-request directly instead.  These aliases created problems on
+case-insensitive systems where they shadowed other commands.
+
+=item *
+
+Restored the old (pre 818) behaviour of
+C<ActivePerl::DocTools::WriteTOC()>.  It now only warns if it can't
+write to the F<perltoc.html> file.
+
+=item *
+
+ActiveState::Browser now also looks for C<xdg-open>, C<galeon> and
+C<opera> on Unix.  It also knows how to detect KDE/Gnome properly.
+
+=item *
+
+ActiveState::Scineplex now has a JSON output mode.
+
+=item *
+
+Long hostnames are now supported on HP-UX.
+
+=item *
+
+Many bundled modules have been updated to their latest versions:
+
+    Archive-Zip-1.18
+    Data-Dump-1.08
+    DBD-SQLite-1.13
+    HTML-Parser-3.56
+    HTML-Tree-3.23
+    Mac-Apps-Launch-1.93
+    Mac-Errors-1.13
+    Mac-Glue-1.30
+    Win32-0.28
+    XML-Simple-2.16
+
+=item *
+
+A patch has been applied to DBI-1.52 to make it more robust against
+drivers not handling multiple result sets with different numbers of
+columns correctly.  DBI wasn't upgraded to version 1.53 because that
+one breaks compatibility with DBD-Sybase.
+
+=back
+
+=head2 Build 819 Wednesday, Aug 31, 2006
+
+Build 819 is based on Perl 5.8.8.
+
+I<Bug Fixes and Changes since build 818>
+
+=over 3
+
+=item *
+
+HTML table of contents did not get updated as packages were
+installed/removed.
+
+=item *
+
+libwww-perl package was not properly recorded by PPM.
+
+=item *
+
+Term-ReadLine-Perl was missing.
+
+=item *
+
+Upgradable packages no longer show packages with equal version number
+in the PPM GUI.
+
+=back
+
+=head2 Build 818 Wednesday, Aug 16, 2006
+
+Build 818 is based on Perl 5.8.8.
+
+I<Bug Fixes and Changes since build 817>
+
+=over 3
+
+=item *
+
+This is the first non-beta release of 64 bit ActivePerl.  It is
+available for Windows and Linux on x64 as well as Solaris on Sparc.
+The 64 bit Windows release does not include PerlScript, PerlEx, Perl
+for ISAPI or PerlEz.
+
+The 64 bit releases do not yet contain the Tcl and Tkx modules.
+
+=item *
+
+PPM has been rewritten; see Release Notes and L<ppm> for details.
+
+=item *
+
+All bundled modules and scripts are now installed in the C<perl> area
+and the C<site> area is now completely empty in a new ActivePerl
+installation.
+
+=item *
+
+Rearranged order of C<@INC>; modules installed in C<site> area now
+take precedence over the bundled modules.
+
+=item *
+
+Simplified directory layout on Unix; no more architecture and version
+specific directories.  This makes the layout the same as the Windows
+version of ActivePerl.
+
+=item *
+
+Term::ReadLine console fix for Windows.
+
+=item *
+
+Avoid trying to read F<C:\dev\urandom> at startup on Windows.
+
+=item *
+
+The C<gridRemove> method has been enabled for Tk.pm.
+
+=item *
+
+The Win32::OLE module in libwin32 package has been upgraded from
+version 0.1704 to version 0.1707.
+
+=over
+
+=item *
+
+add special support for tlbinf32.dll from Microsoft
+
+=item *
+
+add support for receiving VT_RECORD and arrays of VT_RECORD
+
+=item *
+
+improve error handling logic
+
+=item *
+
+fix memory leak in Win32::OLE::Enum::All() and Win32::OLE::Enum::Next()
+
+=item *
+
+in ClearVariantObject() check IDispatch/IUnknown variants
+for NULL before calling Release() on them
+
+=back
+
+=item *
+
+Double quotes are now displayed properly in the HTML documentation.
+
+=item *
+
+F<DynaLoader.o> has now been moved into F<libperl.so> on Unix.  This
+makes it easier to embed perl and is the same arrangement as perl on
+Windows.
+
+=item *
+
+Added ActiveState::Browser module to ActiveState-Utils.
+
+=item *
+
+Most files of the Perl installation are now readonly on Windows.
+
+=item *
+
+Added a workaround for Module::Install brokenness that affected
+ActivePerl::Config (introduced in build 815).  This prevented some
+modules to install under the CPAN shell.
+
+=item *
+
+Added error checks after execing PL_cshname or PL_sh_path.
+
+=item *
+
+Many bundled modules have been updated to their latest versions:
+
+    Archive-Tar-1.30
+    CGI 3.20
+    Compress-Zlib-1.42
+    HTML-Parser-3.55
+    HTML-Tree-3.20
+    Mac-AppleEvents-Simple-1.18
+    Mac-Carbon-0.77
+    Mac-Errors-1.12
+    Mac-Glue-1.27
+    threads 1.31
+    threads-shared 1.01
+    Term-ReadLine-Perl-1.0302
+
+=item *
+
+New bundled modules:
+
+    DBI-1.52
+    DBD-SQLite-1.12
+    Math-BigInt-FastCalc-0.10
+    Tcl-0.89
+    Tkx-1.04
+
+=back
+
+=head2 Build 817.91 (818 Beta 2) Wednesday, Jul 19, 2006
+
+Introduce PPM graphical interface and Tkx.
+
+=head2 Build 817.90 (818 Beta 1) Wednesday, May 31, 2006
+
+Introduce rearranged order of C<@INC> and the new PPM command line client.
+
+=head2 Build 817 Wednesday, Mar 22, 2006
+
+Build 817 is based on Perl 5.8.8.
+
+I<Bug Fixes and Changes>
+
+=over 3
+
+=item *
+
+Upgraded the core threads and threads::shared modules with
+threads-1.12 and threads-shared-0.99 from CPAN.  This fixes the handle
+leakage on Windows and allows setting the stack size for new threads.
+It also fixes both the '!=' comparison operator for thread objects and
+the crashes while joining threads that go re-introduced in build 816.
+
+=item *
+
+Fixed several bugs in the new implementation of alarm() for Windows.
+They did manifest themselves by signals not being delivered, or by GUI
+applications randomly hanging.
+
+=item *
+
+Restored binary compatibility for SvPV_nolen() and similar macros.
+This incompatibility made it impossible to use perlapp for Unix on Tk
+based applications.
+
+=item *
+
+Reintroduce PL_memory_wrap for binary compatibility.
+
+=item *
+
+The C<require> builtin now ignores directories matching the given name
+when searching @INC.
+
+=back
+
+=head2 Build 816 Thursday, Mar 2, 2006
+
+Build 816 is based on Perl 5.8.8.
+
+I<Bug Fixes and Changes>
+
+=over 3
+
+=item *
+
+Perl 5.8.8 has been incorporated.  See L<perl588delta.pod> for a list
+of changes.
+
+=item *
+
+ActivePerl build 816 is now also available as a 64 bit Beta release
+for Windows and Linux on x86_64 as well as Solaris on Sparc.  The 64
+bit Windows Beta does not include PerlScript, PerlEx, Perl for ISAPI
+or PerlEz.
+
+=item *
+
+The ActivePerl Community License has been clarified.  It now
+explicitly allows you to redistribute certain parts of ActivePerl as
+part of applications generated by wrapping tools such as by PAR,
+PerlApp and Perl2Exe.  Please refer to the license text for actual
+terms and conditions.
+
+=item *
+
+ActivePerl for Mac OS X is now a Universal binary that supports all
+Macintosh hardware natively.
+
+=item *
+
+ActivePerl for Solaris is now built with the vendor compiler.
+Previous releases were built with the GNU compiler (gcc).
+
+=item *
+
+C<ActivePerl::Config> on Solaris and HP-UX now provide compatibility so
+that extensions can be built using gcc.  This happens automatically if
+the vendor compiler is not available on the target system.
+
+=item *
+
+ActivePerl now ships with a preinitialized C<CPAN::Config> module.
+This avoids the need to go through the configuration dialog the first
+the CPAN shell is invoked.  The configuration dialog can still be
+invoked by the C<o conf init> command to the CPAN shell.
+
+=item *
+
+Syntax colored documentation and ActiveState::Scineplex is now
+supported for all the Unix platforms.
+
+=item *
+
+Passive transfer mode is now the default for C<Net::FTP>.  This mode
+is more likely to work with modern firewall setups.
+
+=item *
+
+Problem where 'perl -s' wasn't able to parse -foo=bar switches has
+been corrected.
+
+=item *
+
+The stat() builtin would not return the expected result when passed a
+directory name with trailing slashes on Windows.  This problem has
+been fixed.
+
+This problem caused the rmtree() function of the C<File::Path>
+module introduced in build 815 to fail for such directory names on
+Windows.
+
+=item *
+
+The C<IO::Socket::INET> is now more efficient and it does not rely on
+getprotobyname("tcp") to be functional any more.
+
+=item *
+
+A problem where long groups entries could cause memory exhaustion has
+been fixed.
+
+=item *
+
+A problem with the alarm() function on Windows 2003 has been fixed.
+
+=item *
+
+The Tk module would sometimes fail to update the C<-cursor> attribute
+of widgets for 64-bit builds of perl.  This problem has now been fixed.
+
+=item *
+
+Many bundled modules have been updated to their latest versions:
+
+    Digest-SHA-2.11
+    HTML-Tagset-3.10
+    HTML-Parser-3.50
+    HTML-Tree-3.1901
+    IO-String-1.08
+    libwww-perl-5.805
+    Mac-Errors-1.11
+    Win32-OLE-0.1704
+
+=back
+
+=head2 Build 815 Wednesday, Nov 2, 2005
+
+Build 815 is based on Perl 5.8.7.
+
+I<Bug Fixes and Changes>
+
+=over 3
+
+=item *
+
+The PerlEx plugin for IIS has been added to ActivePerl for Windows.
+It caches precompiled CGI scripts in memory to increase their
+performance.
+
+=item *
+
+The table of contents for the HTML documentation has been reverted
+back to the format used before build 813 (it no longer requires
+JavaScript to be enabled).
+
+=item *
+
+ExtUtils::MakeMaker now generates and installs HTML documentation
+automatically.  Regardless how modules are being installed (via PPM,
+through the CPAN shell, or by manual compilation and installation),
+the HTML documentation is always kept up-to-date.
+
+=item *
+
+Code snippets in the HTML documentation are syntax colored.  This
+feature is currently only available on Windows and Mac OS X.
+
+=item *
+
+ActiveState::Scineplex has been added on Windows and Mac OS X.  This
+module analyzes source code for various programming languages and is
+being used to colorize the code snippets in the HTML documentation.
+
+=item *
+
+The ActivePerl::Config module has been added. It allows perl's
+configuration options to be overridden.  The module can also
+automatically reconfigure ActivePerl for alternative compilation
+environments when the default compiler cannot be found.
+
+On Windows, MakeMaker will use the F<gcc.exe> compiler from MinGW and
+the F<dmake.exe> utility if the Microsoft Visual C++ compiler
+F<cl.exe> and the F<nmake.exe> utility are not available on the
+PATH. This will also work automatically from within the CPAN shell.
+
+=item *
+
+The F<perl-static> executable on Unix will now pick up a matching
+Config.pm (there is no statically linked Perl on Windows).
+
+=item *
+
+File::Path's rmtree() function has been replaced to address
+security vulnerability CAN-2005-0448.
+
+=item *
+
+Fixed incompatibility problem with Tk and Encode version 2.10 which was
+introduced in build 813 (perl-5.8.7).
+
+=item *
+
+Win32::GetOSName() can now identify Windows Vista.
+
+=item *
+
+Various ActiveState::* utility modules have been added.
+
+=item *
+
+libwin32 has been updated to version 0.26:
+
+=over 3
+
+=item *
+
+Win32API::File
+
+New GetFileAttributes() function and corresponding constants.
+
+Added GetFileSize(), getFileSize(), setFilePointer(), and
+GetOverlappedResult() functions. The file position operations can use
+Math::BigInt objects.
+
+Experimental new object oriented interface added. This will be moved
+into a separate module in a later release.
+
+=item *
+
+Win32API::Registry
+
+Added DELETE/READ_CONTROL/WRITE_DAC/WRITE_OWNER/SYNCHRONIZE as KEY_*.
+
+=item *
+
+Win32::Clipboard
+
+GetBitmap() should now work correctly with 1 bit, 4 bit, 8 bit,
+16 bit, 24 bit, and 32 bit colors.
+
+=item *
+
+Win32::Console
+
+Renamed GRAY to LIGHTGRAY and added definitions for the "real" GRAY
+colors.
+
+Added get_Win32_IPC_HANDLE() method so that Win32::IPC can wait
+on a console handle.
+
+Added SetIcon() method to change the icon of the window.
+
+Don't export the scalar variables to %main:: but into the callers
+namespace.
+
+=item *
+
+Win32::Process
+
+Added get_Win32_IPC_HANDLE() method for Win32::IPC compatibility.
+
+Added STILL_ACTIVE constant for GetExitCode().
+
+Win32::Process::Open() now records the process ID correctly
+for GetProcessID().  It also creates handle now that can be
+used with the Wait() method.
+
+=item *
+
+Win32::Shortcut
+
+The Save() function now calls Win32::GetLongPathName() on the filename
+to make sure to use a fully qualified pathname.
+
+The Save() will store the new filename as the 'File' property unless
+the Shortcut object already has a 'File' property.
+
+=back
+
+=item *
+
+Many bundled modules have been updated to their latest versions:
+
+    Archive-Tar-1.26
+    Archive-Zip-1.16
+    Compress-Zlib-1.41
+    HTML-Parser-3.46
+    IO-String-1.07
+    Mac-Apps-Launch-1.92
+    Mac-OSA-Simple-1.09
+    Time-HiRes-1.76
+    Unicode-String-1.09
+
+=back
+
+=head2 Build 814 Beta Tuesday, Jun 28, 2005
+
+Build 814 Beta is based on Perl 5.8.7.  This release is provided as a
+Windows MSI installer only.
+
+I<Bug Fixes and Changes>
+
+=over 3
+
+=item *
+
+Bundled PerlEx, an ISAPI plugin for the IIS web server.
+
+=item *
+
+Built in ActivePerl:: module providing version information.
+
+=item *
+
+The C<gedi> program now actually runs.  This is a demo program
+installed by the C<Tk> package.
+
+=item *
+
+Text-Autoformat module updated to version 1.13.
+
+=back
+
+=head2 Build 813 Tuesday, Jun 7, 2005
+
+Build 813 is based on Perl 5.8.7.
+
+I<Bug Fixes and Changes>
+
+=over 3
+
+=item *
+
+ActivePerl is now supported on the Mac OS X, Solaris (x86), and AIX platforms.
+
+=item *
+
+New improved HTML documentation which requires JavaScript enabled
+browser.
+
+=item *
+
+Installation of the HTML documentation is now optional.
+
+=item *
+
+Perl 5.8.7 has been incorporated.  See L<perl587delta.pod> for a list of changes.
+
+=item *
+
+ActivePerl will now evaluate 'sitecustomize.pl' at startup if present.
+The ActivePerl distribution does not ship with this file, but it is a
+hook that the system administrator can use to set up set up additional
+site specific @INC entries.
+
+=item *
+
+Fixed Net::Ping's ICMP implementation to not give up waiting for the
+echo reply until it either receives an unreachable reply or times out.
+Previous versions would for instance give up if they received a source
+quench reply.
+
+=item *
+
+Many bundled modules have been updated to their latest versions:
+
+    Archive-Tar-1.23
+    Compress-Zlib-1.34
+    Convert-ASN1-0.19 (only for HP-UX)
+    HTML-Parser-3.45
+    HTML-Tagset-3.04
+    libwww-perl-5.803
+    XML-Simple-2.14
+
+=item *
+
+New modules
+
+    Mac-AppleEvents-Simple-1.17
+    Mac-Apps-Launch-1.91
+    Mac-Carbon-0.74
+    Mac-Errors-1.10
+    Mac-Glue-1.25
+    Mac-OSA-Simple-1.08
+    MLDBM-2.01 (only for Mac OS X)
+    Text-Autoformat-1.12
+    Text-Reform-1.11
+    Time-Epoch-0.02 (only for Mac OS X)
+    Unicode-String-2.07
+
+The "Mac-" modules are only present for Mac OS X as well.
+
+=item *
+
+The ActiveState-Rx module has been dropped from the distribution.
+
+=back
+
+=head2 Build 812 Monday, Jan 10, 2005
+
+Build 812 is based on Perl 5.8.6.
+
+I<Bug Fixes and Changes>
+
+=over 3
+
+=item *
+
+On Unix, provide a destructor for libperl.  This allows libperl to be
+repeatedly loaded and unloaded by e.g. mod_perl without running out of
+thread local storage slots.  On Windows this was already handled
+correctly.
+
+=item *
+
+The reloc_perl -a option has been fixed.  It is now possible to relocate
+from a shorter to a longer path.
+
+=back
+
+=head2 Build 811 Wednesday, Dec 1, 2004
+
+Build 811 is based on Perl 5.8.6.
+
+I<Bug Fixes and Changes>
+
+=over 3
+
+=item *
+
+Perl 5.8.6 has been incorporated.  See L<perl585delta.pod> and
+L<perl586delta> for a list of changes.
+
+=item *
+
+Fixed stack corruption in the Tk-804.027 module.  This would sometimes
+make Tk programs crash.
+
+=item *
+
+Fixed handling of Unicode in XML-DOM-1.43.  Some Unicode strings would
+end up UTF-8 encoded when they should not be.  The XML::DOM module is
+only distributed as part of ActivePerl on HP-UX.
+
+=item *
+
+Many bundled modules have been updated to their latest versions:
+
+    Archive-Tar-1.22
+    Data-Dump-1.06
+    Digst-MD4-1.4
+    Encode-2.09
+    HTML-Parser-3.38
+    IO-Zlib-1.04
+    libwin32-0.24 (only for Windows)
+    libwww-perl-5.801
+    libxml-perl-0.08 (only for HP-UX)
+    perl-ldap-0.3202
+    URI-1.35
+
+In addition, IO::String version 1.06 is now included with
+ActivePerl.
+
+=back
+
+=head2 Build 810 Monday, Jun 7, 2004
+
+Build 810 is based on Perl 5.8.4.
+
+I<Bug Fixes and Changes>
+
+=over 3
+
+=item *
+
+Perl 5.8.4 has been incorporated.  See L<perl584delta> for a list
+of changes.
+
+=item *
+
+The default install location on Unix is now F</opt/ActivePerl-5.8>.
+Earlier versions installed into F</usr/local/ActivePerl-5.8> by
+default.
+
+=item *
+
+Many bundled modules have been updated to their latest versions:
+
+    Archive-Tar-1.08
+    Compress-Zlib-1.33
+    Data-Dump-1.03
+    Digest-SHA1-2.10
+    File-CounterFile-1.04
+    Font-AFM-1.19
+    HTML-Parser-3.36
+    libwww-perl-5.79
+    MD5-2.03
+    perl-ldap-0.31 (only for HP-UX))
+    Tk-804.027
+    URI-1.30
+    XML-Simple-2.12
+    XML-XSLT-0.48 (only for HP-UX))
+
+=back
+
+=head2 Build 809 Monday, Feb 2, 2004
+
+Build 809 is based on Perl 5.8.3.
+
+I<Bug Fixes and Changes>
+
+=over 3
+
+=item *
+
+Perl 5.8.3 has been incorporated.  See L<perl583delta> for a list
+of changes.
+
+=item *
+
+The Win32 module now includes the Win32::IsAdminUser() function that
+checks if the current interpreter runs with Administrator privileges.
+
+=item *
+
+The access violations of detached threads on thread exit have been
+fixed.
+
+=item *
+
+Time::HiRes now provides high resolution on Windows too.
+
+=back
+
+=head2 Build 808 Saturday, Dec 6, 2003
+
+Build 808 is based on Perl 5.8.2.
+
+I<Changes>
+
+=over 3
+
+=item *
+
+Perl 5.8.2 has been incorporated.  See L<perl582delta> for a list of
+changes.
+
+ActivePerl build 808 is still being compiled with the
+C<-DNO_HASH_SEED> option to maintain binary compatibility with earlier
+releases.  Perl 5.8.2 implements a new rehashing scheme that will kick
+in dynamically based on the actual data being stored in a hash.  This
+new scheme is backwards compatible and is enabled in ActivePerl build
+808.
+
+=item *
+
+The following modules are bundled with ActivePerl for HP-UX and have
+been updated to their latest versions:
+
+    Convert-ASN1-0.18
+    XML-DOM-1.43
+    XML-XPath-1.13
+    XML-XSLT-0.45
+    perl-ldap-0.30
+
+=back
+
+=head2 Build 807 Thursday, Nov 6, 2003
+
+Build 807 is based on Perl 5.8.1.  This is the first release of ActivePerl
+based on this new maintenance release of Perl.  This release is meant for
+use in production systems.  However, owing to the sheer volume of changes
+between Perl 5.8.0 and 5.8.1 that have been incorporated, please be sure
+to test it thoroughly in a non-critical environment before you upgrade
+your production systems.
+
+Please check L<perl581delta> for a list of the major changes in Perl.
+Only additional changes specific to ActivePerl are mentioned here.
+
+I<Bug Fixes and Changes>
+
+=over 3
+
+=item *
+
+Perl 5.8.1 has been incorporated.  See L<perl581delta> for a list of changes.
+
+B<Important note:> The new I<Hash Randomization> feature has been
+disabled in ActivePerl because it is not compatible with Perl 5.8.0.
+If we enabled this feature then some modules compiled with 5.8.0 would
+not work correctly with 5.8.1 and most modules compiled with 5.8.1
+would not work at all with Perl 5.8.0.  This would require maintaining
+separate PPM module repositories for 5.8.0 and 5.8.1.
+
+To enable the I<Hash Randomization> feature you must recompile
+ActivePerl from source and remove the C<-DNO_HASH_SEED> definition
+from the C compiler options.  In that case you must compile all CPAN
+modules yourself too because the PPM repository binaries will not be
+compatible.
+
+=item *
+
+Windows 2003 Server is now officially supported.  The installer adds
+entries to the IIS6 "Web Services Extensions" list for both "Perl CGI"
+and "Perl ISAPI".  Both are set to "Prohibited" by default and must
+be explicitly changed to "Allow" in the IIS Manager.
+
+Win32::GetOSName() detects the release version of Windows 2003
+correctly.
+
+=item *
+
+ActiveState::Rx module has been included.  This module is necessary to
+use the Rx Toolkit in ActiveState Visual Perl.  You must upgrade
+Visual Perl to version 1.8.1 to use the Rx Toolkit with Perl 5.8.
+
+=item *
+
+Many bundled modules have been updated to their latest versions:
+
+    Archive-Tar-1.07
+    Compress-Zlib-1.22
+    Data-Dump-1.01
+    Digest-MD2-2.03
+    Digest-MD5-2.30
+    Digest-SHA1-2.06
+    File-CounterFile-1.01
+    HTML-Parser-3.34
+    HTML-Tree-3.18
+    URI-1.27
+    XML-Parser-2.34
+    XML-Simple-2.09
+    libwin32-0.21
+    libwww-perl-5.75
+
+In addition, IO::Zlib version 1.01 is now included with ActivePerl.
+
+=back
+
+I<PPM>
+
+=over 3
+
+=item *
+
+The I<upgrade> command has been fixed.
+
+=item *
+
+It is now possible to install from a file URL while not being
+connected to the Internet.
+
+=item *
+
+PPM now works on Windows even when the Term::InKey module is
+installed.
+
+=back
+
+I<Perl for ISAPI>
+
+=over 3
+
+=item *
+
+Perl for ISAPI no longer uses line buffering for STDOUT.  This is
+especially important for running under IIS6 which bypasses TCP/IP
+nagling and directly sends every packet individually.
+
+=item *
+
+Perl for ISAPI used to close all open file handles before shutting
+down the Perl interpreter.  The intention was to prevent file handle
+leaks from buggy Perl scripts while running inside the IIS process.
+Unfortunately Perl may still execute END blocks or call DESTROY
+methods during final destruction and some file handles may get closed
+twice in this scenario.
+
+This creates a race condition: the file handle may already have been
+re-opened by a different thread before the second close happens.  Perl
+then closes a file handle it doesn't own anymore.  This may cause a
+different page request to fail.
+
+To avoid this race condition Perl for ISAPI will no longer try to
+automatically close open file handles.  Therefore it is possible that
+broken Perl applications will now start leaking file handles if they
+don't close them correctly themselves.
+
+=back
+
+=head2 Build 806 Monday, March 31, 2003
+
+I<Bug Fixes and Changes>
+
+=over 3
+
+=item *
+
+Several bug fixes and other improvements have been merged from the
+Perl development track.  In particular, many of these fixes address
+problems in the PerlIO implementation.  See the ActivePerl source
+code diff for the complete list of included changes.
+
+=item *
+
+Other minor bug fixes and documentation updates.
+
+=back
+
+I<PPM>
+
+PPM has been upgraded to version 3.1.  It fixes most of the known
+problems, including:
+
+=over 3
+
+=item *
+
+PPM 3.1 now provides all the functionality of PPM 2.0 and 3.0.
+PPM 2.0 is therefore no longer included in ActivePerl 5.8.
+
+=item *
+
+PPM now works correctly through a proxy server requiring basic
+authentication.  Previous versions of PPM 3.0 only supported
+proxy servers that did not require authentication.
+
+=item *
+
+PPM is now more robust in handling user-defined repository URLs.
+For instance, URLs with a trailing slash no longer result in
+fatal errors.
+
+=item *
+
+Support for ASPN Perl profiles has been much improved.  However,
+at the time of this writing, the ActivePerl 5.8 repositories
+do not yet support profiles.  This is expected to become available
+shortly.
+
+=item *
+
+In previous versions of PPM 3, incorrect search results from the
+repository (such as package names that do not have corresponding
+PPD files) could crash the PPM3 client.  PPM now generates meaningful
+error messages under these circumstances.
+
+=back
+
+=head2 Build 805 Thursday, Feb 6, 2003
+
+I<Bug Fixes and Changes>
+
+=over 3
+
+=item *
+
+Several bug fixes and other improvements have been merged from the
+Perl development track.  In particular, many of these fixes address
+weaknesses in Unicode support.  See the ActivePerl source code diff
+for the complete list of included changes.
+
+=item *
+
+Bugs in the Perl 5.8 integration of Perl for ISAPI and PerlScript
+that resulted in failure to flush output correctly at the termination
+of the script have been fixed.
+
+=item *
+
+On Windows, system() and backticks could return invalid status when
+running under environments where the process has to handle Windows
+messages.  PerlScript and Perl for ISAPI fall under this category.
+The problem has been corrected.
+
+=item *
+
+On Windows, PerlScript and Perl for ISAPI were affected by a reentrancy
+problem, which meant that recursive invocation of these two engines
+could fail.  This problem has been corrected.
+
+=item *
+
+Tk and libwww-perl has been updated to their latest versions.
+
+=item *
+
+Win32::Shortcut no longer calls CoUninitialize() within an END block.
+This avoids random coredumps from this module when its DESTROY methods
+happen to get called after the END block executes.
+
+=item *
+
+PPM v2 and v3 can now optionally generate HTML documentation when
+installing packages if POD documentation is found in the package.
+This is controlled by the rebuildhtml option in PPM v2 and the
+rebuild-html option in PPM v3.
+
+=item *
+
+Other minor bug fixes and documentation updates.
+
+=back
+
+=head2 Build 804 Friday, Nov 29, 2002
+
+I<What's new in the 800 Series>
+
+=over 3
+
+=item *
+
+This build corresponds to the Perl 5.8.0 source code release.
+
+=item *
+
+The 800 series builds of ActivePerl are not binary compatible with
+builds in the 500 or 600 series.  Any extensions built using binaries
+from the ActivePerl 500 or 600 series will need to be recompiled.
+Note especially that this applies to PPM packages that may have been
+built for 500 or 600 series builds.
+
+=item *
+
+Significant changes that have occurred in the 5.8.0 release
+are documented in L<perl58delta>.
+
+=item *
+
+Support has been enabled for large file access on all platforms,
+meaning that file manipulation facilities within perl can cope with
+files larger than 2GB or 4GB.
+
+=item *
+
+Many new modules are included as a standard part of perl 5.8.0.  See
+"Modules and Pragmata" in L<perl58delta> for a detailed list.
+In addition, the Data::Dump module is now included with ActivePerl.
+Many other modules have been updated to their latest versions.
+
+=item *
+
+PPM v3 is now included as the default C<ppm> executable.  PPM v2
+continues to be available, and can be executed as C<ppm2>.
+
+=back
+

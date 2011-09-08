@@ -1,0 +1,12 @@
+\usr\local\perl\bin\ap-update-html
+\usr\local\perl\bin\ap-update-html.bat
+\usr\local\perl\bin\ap-user-guide
+\usr\local\perl\bin\ap-user-guide.bat
+\usr\local\perl\lib\ActivePerl\DocTools.pm
+\usr\local\perl\lib\ActivePerl\DocTools\Pod.pm
+\usr\local\perl\lib\ActivePerl\DocTools\TOC.pm
+\usr\local\perl\lib\ActivePerl\DocTools\TOC\HTML.pm
+\usr\local\perl\lib\ActivePerl\DocTools\TOC\RDF.pm
+\usr\local\perl\lib\ActivePerl\DocTools\TOC\tocTab.pm
+\usr\local\perl\lib\ActivePerl\DocTools\TOC\tocxml.pm
+\usr\local\perl\lib\ActivePerl\DocTools\Tree\HTML.pm

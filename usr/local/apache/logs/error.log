@@ -1,0 +1,18 @@
+[Tue Sep 06 20:32:59 2011] [warn] Init: SSL server IP/port conflict: localhost:443 (Z:/usr/local/apache/conf/vhosts.conf:38) vs. test.ru:443 (Z:/usr/local/apache/conf/vhosts.conf:61)
+[Tue Sep 06 20:32:59 2011] [warn] Init: You should not use name-based virtual hosts in conjunction with SSL!!
+[Tue Sep 06 20:32:59 2011] [warn] Init: SSL server IP/port conflict: localhost:443 (Z:/usr/local/apache/conf/vhosts.conf:38) vs. test.ru:443 (Z:/usr/local/apache/conf/vhosts.conf:61)
+[Tue Sep 06 20:32:59 2011] [warn] Init: You should not use name-based virtual hosts in conjunction with SSL!!
+[Tue Sep 06 20:33:00 2011] [notice] Apache/2.2.4 (Win32) mod_ssl/2.2.4 OpenSSL/0.9.8d PHP/5.2.4 configured -- resuming normal operations
+[Tue Sep 06 20:33:00 2011] [notice] Server built: Jan  9 2007 23:17:20
+[Tue Sep 06 20:33:00 2011] [notice] Parent: Created child process 2456
+[Tue Sep 06 20:33:01 2011] [notice] Disabled use of AcceptEx() WinSock2 API
+[Tue Sep 06 20:33:01 2011] [warn] Init: SSL server IP/port conflict: localhost:443 (Z:/usr/local/apache/conf/vhosts.conf:38) vs. test.ru:443 (Z:/usr/local/apache/conf/vhosts.conf:61)
+[Tue Sep 06 20:33:01 2011] [warn] Init: You should not use name-based virtual hosts in conjunction with SSL!!
+[Tue Sep 06 20:33:01 2011] [warn] Init: SSL server IP/port conflict: localhost:443 (Z:/usr/local/apache/conf/vhosts.conf:38) vs. test.ru:443 (Z:/usr/local/apache/conf/vhosts.conf:61)
+[Tue Sep 06 20:33:01 2011] [warn] Init: You should not use name-based virtual hosts in conjunction with SSL!!
+[Tue Sep 06 20:33:01 2011] [notice] Child 2456: Child process is running
+[Tue Sep 06 20:33:01 2011] [notice] Child 2456: Acquired the start mutex.
+[Tue Sep 06 20:33:01 2011] [notice] Child 2456: Starting 250 worker threads.
+[Tue Sep 06 20:33:01 2011] [notice] Child 2456: Listening on port 443.
+[Tue Sep 06 20:33:01 2011] [notice] Child 2456: Listening on port 80.
+[Tue Sep 06 20:34:27 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/mir/images/header.png, referer: http://localhost/mir/styles.css

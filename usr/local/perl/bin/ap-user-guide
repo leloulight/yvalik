@@ -1,0 +1,16 @@
+#!/usr/bin/perl -w
+
+# This script will open up the ActivePerl User Guide in your
+# web browser.
+
+use strict;
+use Config qw(%Config);
+
+my $htmldir = $Config{installhtmldir} || "$Config{prefix}/html";
+my $index = "$htmldir/index.html";
+
+die "No HTML docs installed at $htmldir\n"
+    unless -f $index;
+
+require ActiveState::Browser;
+ActiveState::Browser::open($index);
