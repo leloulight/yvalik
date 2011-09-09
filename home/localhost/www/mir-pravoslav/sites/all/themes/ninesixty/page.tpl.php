@@ -15,14 +15,17 @@
   <?php print $head; ?>
   <?php print $styles; ?>
   <?php print $scripts; ?>
-  <?php if (drupal_is_front_page()) : ?>
-  	<script type="text/javascript" src="<?php global $base_url ?><?= $base_url."/".path_to_theme() ?>/js/jquery.min.js" ></script>
+  <?php 
+  global $base_root;
+  if (!strstr(request_uri(),"admin")) : ?>
+  	<!--<script type="text/javascript" src="<?php global $base_url ?><?= $base_url."/".path_to_theme() ?>/js/jquery.min.js" ></script>-->
   <?php endif; ?>
     <script type="text/javascript" src="<?= $base_url."/".path_to_theme() ?>/js/jquery.jcarousel.js" ></script>
     <link rel="stylesheet" type="text/css" href="<?= $base_url."/".path_to_theme() ?>/styles/skin.css" />
 </head>
 
 <body class="<?php print $body_classes; ?> show-grid">
+
   <div id="page" class="container-16 clear-block">
 
     <div id="site-header" class="clear-block">
@@ -151,7 +154,10 @@
 	
 	jQuery('#mycarousel').jcarousel({
         vertical: true,
-        scroll: 2
+        scroll: 2,
+		auto:500,  
+        speed:1000 
+		
     });
 });
   </script>

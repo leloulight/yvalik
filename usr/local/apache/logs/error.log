@@ -1,58 +1,24 @@
-[Thu Sep 08 16:42:55 2011] [warn] Init: SSL server IP/port conflict: localhost:443 (Z:/usr/local/apache/conf/vhosts.conf:38) vs. test.ru:443 (Z:/usr/local/apache/conf/vhosts.conf:61)
-[Thu Sep 08 16:42:55 2011] [warn] Init: You should not use name-based virtual hosts in conjunction with SSL!!
-[Thu Sep 08 16:42:55 2011] [warn] Init: SSL server IP/port conflict: localhost:443 (Z:/usr/local/apache/conf/vhosts.conf:38) vs. test.ru:443 (Z:/usr/local/apache/conf/vhosts.conf:61)
-[Thu Sep 08 16:42:55 2011] [warn] Init: You should not use name-based virtual hosts in conjunction with SSL!!
-[Thu Sep 08 16:42:55 2011] [notice] Apache/2.2.4 (Win32) mod_ssl/2.2.4 OpenSSL/0.9.8d PHP/5.2.4 configured -- resuming normal operations
-[Thu Sep 08 16:42:55 2011] [notice] Server built: Jan  9 2007 23:17:20
-[Thu Sep 08 16:42:55 2011] [notice] Parent: Created child process 1336
-[Thu Sep 08 16:42:55 2011] [notice] Disabled use of AcceptEx() WinSock2 API
-[Thu Sep 08 16:42:56 2011] [warn] Init: SSL server IP/port conflict: localhost:443 (Z:/usr/local/apache/conf/vhosts.conf:38) vs. test.ru:443 (Z:/usr/local/apache/conf/vhosts.conf:61)
-[Thu Sep 08 16:42:56 2011] [warn] Init: You should not use name-based virtual hosts in conjunction with SSL!!
-[Thu Sep 08 16:42:56 2011] [warn] Init: SSL server IP/port conflict: localhost:443 (Z:/usr/local/apache/conf/vhosts.conf:38) vs. test.ru:443 (Z:/usr/local/apache/conf/vhosts.conf:61)
-[Thu Sep 08 16:42:56 2011] [warn] Init: You should not use name-based virtual hosts in conjunction with SSL!!
-[Thu Sep 08 16:42:56 2011] [notice] Child 1336: Child process is running
-[Thu Sep 08 16:42:56 2011] [notice] Child 1336: Acquired the start mutex.
-[Thu Sep 08 16:42:56 2011] [notice] Child 1336: Starting 250 worker threads.
-[Thu Sep 08 16:42:56 2011] [notice] Child 1336: Listening on port 443.
-[Thu Sep 08 16:42:56 2011] [notice] Child 1336: Listening on port 80.
-[Thu Sep 08 16:52:05 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:52:05 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:52:05 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:52:05 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:53:28 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:53:28 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:53:29 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:53:29 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:53:35 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:53:35 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:53:35 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:53:35 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 16:53:44 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/4
-[Thu Sep 08 16:53:44 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/4
-[Thu Sep 08 16:53:44 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/4
-[Thu Sep 08 16:53:46 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/4/edit
-[Thu Sep 08 16:53:46 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/4/edit
-[Thu Sep 08 16:53:46 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/4/edit
-[Thu Sep 08 16:53:46 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/4/edit
-[Thu Sep 08 16:54:24 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/4
-[Thu Sep 08 16:54:24 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/4
-[Thu Sep 08 16:54:24 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/4
-[Thu Sep 08 17:08:56 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/4
-[Thu Sep 08 17:08:56 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/4
-[Thu Sep 08 17:08:56 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/node/4
-[Thu Sep 08 17:09:17 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 17:09:17 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 17:09:17 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 17:09:17 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 17:09:31 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 17:09:31 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 17:09:31 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 17:09:31 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 17:09:43 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 17:09:43 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 17:09:43 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 17:09:43 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 17:09:51 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 17:09:51 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 17:09:51 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
-[Thu Sep 08 17:09:51 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
+[Fri Sep 09 13:05:04 2011] [warn] Init: SSL server IP/port conflict: localhost:443 (Z:/usr/local/apache/conf/vhosts.conf:38) vs. test.ru:443 (Z:/usr/local/apache/conf/vhosts.conf:61)
+[Fri Sep 09 13:05:04 2011] [warn] Init: You should not use name-based virtual hosts in conjunction with SSL!!
+[Fri Sep 09 13:05:04 2011] [warn] Init: SSL server IP/port conflict: localhost:443 (Z:/usr/local/apache/conf/vhosts.conf:38) vs. test.ru:443 (Z:/usr/local/apache/conf/vhosts.conf:61)
+[Fri Sep 09 13:05:04 2011] [warn] Init: You should not use name-based virtual hosts in conjunction with SSL!!
+[Fri Sep 09 13:05:04 2011] [notice] Apache/2.2.4 (Win32) mod_ssl/2.2.4 OpenSSL/0.9.8d PHP/5.2.4 configured -- resuming normal operations
+[Fri Sep 09 13:05:04 2011] [notice] Server built: Jan  9 2007 23:17:20
+[Fri Sep 09 13:05:04 2011] [notice] Parent: Created child process 4192
+[Fri Sep 09 13:05:05 2011] [notice] Disabled use of AcceptEx() WinSock2 API
+[Fri Sep 09 13:05:05 2011] [warn] Init: SSL server IP/port conflict: localhost:443 (Z:/usr/local/apache/conf/vhosts.conf:38) vs. test.ru:443 (Z:/usr/local/apache/conf/vhosts.conf:61)
+[Fri Sep 09 13:05:05 2011] [warn] Init: You should not use name-based virtual hosts in conjunction with SSL!!
+[Fri Sep 09 13:05:05 2011] [warn] Init: SSL server IP/port conflict: localhost:443 (Z:/usr/local/apache/conf/vhosts.conf:38) vs. test.ru:443 (Z:/usr/local/apache/conf/vhosts.conf:61)
+[Fri Sep 09 13:05:05 2011] [warn] Init: You should not use name-based virtual hosts in conjunction with SSL!!
+[Fri Sep 09 13:05:05 2011] [notice] Child 4192: Child process is running
+[Fri Sep 09 13:05:05 2011] [notice] Child 4192: Acquired the start mutex.
+[Fri Sep 09 13:05:05 2011] [notice] Child 4192: Starting 250 worker threads.
+[Fri Sep 09 13:05:05 2011] [notice] Child 4192: Listening on port 443.
+[Fri Sep 09 13:05:05 2011] [notice] Child 4192: Listening on port 80.
+[Fri Sep 09 14:40:55 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
+[Fri Sep 09 14:40:55 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
+[Fri Sep 09 14:40:55 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
+[Fri Sep 09 14:41:18 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
+[Fri Sep 09 14:41:18 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
+[Fri Sep 09 14:41:18 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
+[Fri Sep 09 14:41:18 2011] [error] [client 127.0.0.1] File does not exist: Z:/home/localhost/www/sites, referer: http://localhost/mir-pravoslav/admin/build/block
